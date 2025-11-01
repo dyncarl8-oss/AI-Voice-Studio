@@ -1,0 +1,42 @@
+[WS:LOG] WebSocket connection established
+console.ts:38 [WS:LOG] Successful webSocket connection confirmed after 349ms
+ Initializing Whop SDK with APP_ID: present
+ Whop SDK initialized successfully
+ Starting purchase for package: pkg_10
+ Server response: [object Object]
+ Response type: object
+ Response keys: __typename,id,planId
+ Response __typename: CheckoutSession
+ Calling SDK inAppPurchase with: [object Object]
+ SDK object: [object Object]
+ SDK methods: ping,getExperiences,getTopLevelUrlData,openExternalUrl,onHrefChange,navigate,inAppPurchase,closeApp,openHelpChat,getColorTheme,earliestUnreadNotification,markExperienceRead,performHaptic,unlockExperience,promptJoin,invalidTokenDetected,_cleanupTransport
+ [vite] server connection lost. Polling for restart...
+client:536 Uncaught (in promise) SyntaxError: Failed to construct 'WebSocket': The URL 'wss://localhost:undefined/?token=oueXep60cpzB' is invalid.Understand this error
+ Initializing Whop SDK with APP_ID: present
+ Whop SDK initialized successfully
+ Initializing Whop SDK with APP_ID: present
+ Whop SDK initialized successfully
+ === BUTTON CLICKED === pkg_25
+ Starting purchase for package: pkg_25
+ Server response: [object Object]
+ Response type: object
+ Response keys: __typename,id,planId
+ Response __typename: CheckoutSession
+ Calling SDK inAppPurchase with: [object Object]
+ SDK object: [object Object]
+ SDK methods: ping,getExperiences,getTopLevelUrlData,openExternalUrl,onHrefChange,navigate,inAppPurchase,closeApp,openHelpChat,getColorTheme,earliestUnreadNotification,markExperienceRead,performHaptic,unlockExperience,promptJoin,invalidTokenDetected,_cleanupTransport
+ Initializing Whop SDK with APP_ID: present
+ Whop SDK initialized successfully
+ CreditsDisplay component mounted
+ Packages: [object Object],[object Object],[object Object],[object Object]
+ Dialog open: false
+ [vite] server connection lost. Polling for restart...
+ CreditsDisplay component mounted
+ Packages: 
+ Dialog open: false
+ Initializing Whop SDK with APP_ID: present
+ Whop SDK initialized successfully
+ CreditsDisplay component mounted
+ Packages: [object Object],[object Object],[object Object],[object Object]
+ Dialog open: false
+ CreditsDisplay component mounted

@@ -1,0 +1,106 @@
+No "Link: rel=payment-method-manifest" HTTP header found at "https://www.apple.com/apple-pay/".Understand this error
+app/:1 No "Link: rel=payment-method-manifest" HTTP header found at "https://www.apple.com/apple-pay/".Understand this error
+5[Violation] Potential permissions policy violation: ch-dpr is not allowed in this document.Understand this error
+console.ts:38 [WS:LOG] WebSocket connection established
+console.ts:38 [WS:LOG] Successful webSocket connection confirmed after 349ms
+app/:1 <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes">Understand this warning
+react-dom-client.production.js:1076 Unrecognized feature: 'ambient-light-sensor'.
+ti @ react-dom-client.production.js:1076Understand this warning
+react-dom-client.production.js:1076 Unrecognized feature: 'battery'.
+ti @ react-dom-client.production.js:1076Understand this warning
+react-dom-client.production.js:1076 Unrecognized feature: 'document-domain'.
+ti @ react-dom-client.production.js:1076Understand this warning
+react-dom-client.production.js:1076 Unrecognized feature: 'execution-while-not-rendered'.
+ti @ react-dom-client.production.js:1076Understand this warning
+react-dom-client.production.js:1076 Unrecognized feature: 'execution-while-out-of-viewport'.
+ti @ react-dom-client.production.js:1076Understand this warning
+react-dom-client.production.js:1076 Unrecognized feature: 'navigation-override'.
+ti @ react-dom-client.production.js:1076Understand this warning
+react-dom-client.production.js:1076 Unrecognized feature: 'speaker-selection'.
+ti @ react-dom-client.production.js:1076Understand this warning
+react-dom-client.production.js:1076 Unrecognized feature: 'conversion-measurement'.
+ti @ react-dom-client.production.js:1076Understand this warning
+react-dom-client.production.js:1076 Unrecognized feature: 'focus-without-user-activation'.
+ti @ react-dom-client.production.js:1076Understand this warning
+react-dom-client.production.js:1076 Unrecognized feature: 'sync-script'.
+ti @ react-dom-client.production.js:1076Understand this warning
+react-dom-client.production.js:1076 Unrecognized feature: 'trust-token-redemption'.
+ti @ react-dom-client.production.js:1076Understand this warning
+react-dom-client.production.js:1076 Unrecognized feature: 'window-placement'.
+ti @ react-dom-client.production.js:1076Understand this warning
+react-dom-client.production.js:1076 Unrecognized feature: 'vertical-scroll'.
+ti @ react-dom-client.production.js:1076Understand this warning
+react-dom-client.production.js:14246 Allow attribute will take precedence over 'allowfullscreen'.
+u8 @ react-dom-client.production.js:14246Understand this warning
+react-dom-client.production.js:9100 An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.
+ow @ react-dom-client.production.js:9100Understand this warning
+295Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('<URL>') does not match the recipient window's origin ('<URL>').Understand this warning
+/_static/site.webmanifest:1 Manifest: found icon with no valid size.Understand this warning
+41The resource <URL> was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.Understand this warning
+ Initializing Whop SDK with APP_ID: present
+ Whop SDK initialized successfully
+ Starting purchase for package: pkg_10
+ Server response: [object Object]
+ Response type: object
+ Response keys: __typename,id,planId
+ Response __typename: CheckoutSession
+ Calling SDK inAppPurchase with: [object Object]
+ SDK object: [object Object]
+ SDK methods: ping,getExperiences,getTopLevelUrlData,openExternalUrl,onHrefChange,navigate,inAppPurchase,closeApp,openHelpChat,getColorTheme,earliestUnreadNotification,markExperienceRead,performHaptic,unlockExperience,promptJoin,invalidTokenDetected,_cleanupTransport
+/dashboard/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/:1  Failed to load resource: net::ERR_TOO_MANY_REDIRECTSUnderstand this error
+/dashboard/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/:1  Failed to load resource: net::ERR_TOO_MANY_REDIRECTSUnderstand this error
+/dashboard/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/:1  Failed to load resource: net::ERR_TOO_MANY_REDIRECTSUnderstand this error
+/dashboard/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/biz_tTJUnrognVPWEO/:1  Failed to load resource: net::ERR_TOO_MANY_REDIRECTSUnderstand this error
+ [vite] server connection lost. Polling for restart...
+w6pgggjsrl8g0mqgi7fc.apps.whop.com/:1  Failed to load resource: the server responded with a status of 502 ()Understand this error
+exp_x9Y7d5xME0Dltp:1  Failed to load resource: the server responded with a status of 502 ()Understand this error
+ WebSocket connection to 'wss://w6pgggjsrl8g0mqgi7fc.apps.whop.com/?token=oueXep60cpzB' failed: 
+setupWebSocket @ client:536Understand this error
+w6pgggjsrl8g0mqgi7fc…om/@vite/client:536 Uncaught (in promise) SyntaxError: Failed to construct 'WebSocket': The URL 'wss://localhost:undefined/?token=oueXep60cpzB' is invalid.Understand this error
+injected.js:27 Initializing Whop SDK with APP_ID: present
+injected.js:27 Whop SDK initialized successfully
+injected.js:27 Initializing Whop SDK with APP_ID: present
+injected.js:27 Whop SDK initialized successfully
+injected.js:27 === BUTTON CLICKED === pkg_25
+injected.js:27 Starting purchase for package: pkg_25
+injected.js:27 Server response: [object Object]
+injected.js:27 Response type: object
+injected.js:27 Response keys: __typename,id,planId
+injected.js:27 Response __typename: CheckoutSession
+injected.js:27 Calling SDK inAppPurchase with: [object Object]
+injected.js:27 SDK object: [object Object]
+injected.js:27 SDK methods: ping,getExperiences,getTopLevelUrlData,openExternalUrl,onHrefChange,navigate,inAppPurchase,closeApp,openHelpChat,getColorTheme,earliestUnreadNotification,markExperienceRead,performHaptic,unlockExperience,promptJoin,invalidTokenDetected,_cleanupTransport
+injected.js:27 Initializing Whop SDK with APP_ID: present
+injected.js:27 Whop SDK initialized successfully
+injected.js:27 CreditsDisplay component mounted
+injected.js:27 Packages: [object Object],[object Object],[object Object],[object Object]
+injected.js:27 Dialog open: false
+injected.js:27 [vite] server connection lost. Polling for restart...
+w6pgggjsrl8g0mqgi7fc.apps.whop.com/:1  Failed to load resource: the server responded with a status of 502 ()Understand this error
+exp_x9Y7d5xME0Dltp:1  Failed to load resource: the server responded with a status of 502 ()Understand this error
+injected.js:27 CreditsDisplay component mounted
+injected.js:27 Packages: Array(0)
+injected.js:27 Dialog open: false
+injected.js:27 Initializing Whop SDK with APP_ID: present
+injected.js:27 Whop SDK initialized successfully
+injected.js:27 CreditsDisplay component mounted
+injected.js:27 Packages: Array(4)
+injected.js:27 Dialog open: false
+injected.js:27 CreditsDisplay component mounted
+injected.js:27 Packages: Array(4)
+injected.js:27 Dialog open: true
+injected.js:27 === BUTTON CLICKED === pkg_25
+injected.js:27 Starting purchase for package: pkg_25
+injected.js:27 Server response: Object
+injected.js:27 Response type: object
+injected.js:27 Response keys: Array(3)
+injected.js:27 Response __typename: CheckoutSession
+injected.js:27 Calling SDK inAppPurchase with: Object
+injected.js:27 SDK object: Object
+injected.js:27 SDK methods: Array(17)
+injected.js:27 CreditsDisplay component mounted
+injected.js:27 Packages: Array(4)
+injected.js:27 Dialog open: false
+injected.js:27 CreditsDisplay component mounted
+injected.js:27 Packages: Array(4)
+injected.js:27 Dialog open: true

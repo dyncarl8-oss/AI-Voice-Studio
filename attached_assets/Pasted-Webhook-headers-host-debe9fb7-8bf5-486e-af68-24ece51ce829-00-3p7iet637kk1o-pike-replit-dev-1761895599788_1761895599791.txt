@@ -1,0 +1,77 @@
+Webhook headers: {
+  "host": "debe9fb7-8bf5-486e-af68-24ece51ce829-00-3p7iet637kk1o.pike.replit.dev",
+  "user-agent": "Typhoeus - https://github.com/typhoeus/typhoeus",
+  "content-length": "61",
+  "accept": "*/*",
+  "accept-encoding": "gzip",
+  "content-type": "application/json",
+  "newrelic": "eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiNDIwMDUxNyIsImFwIjoiMTAzNjk1MzQzNCIsInR4IjoiZjZhOWJkNGQyNmRhZGMyNCIsInRyIjoiNmM2ZWJhYjU4MjJjNmY3OWYyMGE2ODRhZDJjZWMyNTQiLCJzYSI6ZmFsc2UsInByIjowLjcxMTcyOSwidGkiOjE3NjE4OTU1ODA5NTUsImlkIjoiYTc1ODk1ODkyNzc3MDdkOCJ9fQ==",
+  "traceparent": "00-6c6ebab5822c6f79f20a684ad2cec254-a7589589277707d8-00",
+  "tracestate": "4200517@nr=0-0-4200517-1036953434-a7589589277707d8-f6a9bd4d26dadc24-0-0.711729-1761895580955",
+  "x-forwarded-for": "44.223.185.190, 10.84.6.80",
+  "x-forwarded-proto": "https",
+  "x-replit-user-bio": "",
+  "x-replit-user-id": "",
+  "x-replit-user-name": "",
+  "x-replit-user-profile-image": "",
+  "x-replit-user-roles": "",
+  "x-replit-user-teams": "",
+  "x-replit-user-url": ""
+}
+Mapped headers: {
+  "webhook-id": "",
+  "webhook-timestamp": "",
+  "webhook-signature": ""
+}
+Error processing webhook: Error: Missing required headers
+    at new ExtendableError (/home/runner/workspace/node_modules/standardwebhooks/src/index.ts:12:18)
+    at new WebhookVerificationError (/home/runner/workspace/node_modules/standardwebhooks/src/index.ts:18:5)
+    at Webhook.verify (/home/runner/workspace/node_modules/standardwebhooks/src/index.ts:73:13)
+    at <anonymous> (/home/runner/workspace/server/routes.ts:472:30)
+    at Layer.handle [as handle_request] (/home/runner/workspace/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/runner/workspace/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/runner/workspace/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/runner/workspace/node_modules/express/lib/router/layer.js:95:5)
+    at /home/runner/workspace/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/runner/workspace/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/runner/workspace/node_modules/express/lib/router/index.js:280:10)
+    at <anonymous> (/home/runner/workspace/server/routes.ts:126:5)
+    at Layer.handle [as handle_request] (/home/runner/workspace/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/runner/workspace/node_modules/express/lib/router/index.js:328:13)
+    at /home/runner/workspace/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/runner/workspace/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/runner/workspace/node_modules/express/lib/router/index.js:280:10)
+    at <anonymous> (/home/runner/workspace/server/routes.ts:55:14)
+    at Layer.handle [as handle_request] (/home/runner/workspace/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/runner/workspace/node_modules/express/lib/router/index.js:328:13)
+    at /home/runner/workspace/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/runner/workspace/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/runner/workspace/node_modules/express/lib/router/index.js:280:10)
+    at <anonymous> (/home/runner/workspace/server/index.ts:41:3)
+    at Layer.handle [as handle_request] (/home/runner/workspace/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/runner/workspace/node_modules/express/lib/router/index.js:328:13)
+    at /home/runner/workspace/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/runner/workspace/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/runner/workspace/node_modules/express/lib/router/index.js:280:10)
+    at urlencodedParser (/home/runner/workspace/node_modules/body-parser/lib/types/urlencoded.js:85:7)
+    at Layer.handle [as handle_request] (/home/runner/workspace/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/runner/workspace/node_modules/express/lib/router/index.js:328:13)
+    at /home/runner/workspace/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/runner/workspace/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/runner/workspace/node_modules/express/lib/router/index.js:280:10)
+    at jsonParser (/home/runner/workspace/node_modules/body-parser/lib/types/json.js:104:7)
+    at Layer.handle [as handle_request] (/home/runner/workspace/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/runner/workspace/node_modules/express/lib/router/index.js:328:13)
+    at /home/runner/workspace/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/runner/workspace/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/runner/workspace/node_modules/express/lib/router/index.js:280:10)
+    at /home/runner/workspace/node_modules/body-parser/lib/read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (/home/runner/workspace/node_modules/raw-body/index.js:238:16)
+    at done (/home/runner/workspace/node_modules/raw-body/index.js:227:7)
+    at IncomingMessage.onEnd (/home/runner/workspace/node_modules/raw-body/index.js:287:7)
+    at IncomingMessage.emit (node:events:524:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+7:26:21 AM [express] POST /api/webhooks/payment 400 in 23ms :: {"error":"Missing required headers"}
+7:26:23 AM [express] GET /api/voice-models 304 in 4551ms :: [{"id":"e2a048d5-cda0-4b33-93a6-988b561d…
