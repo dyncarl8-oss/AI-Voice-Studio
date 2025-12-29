@@ -1,0 +1,384 @@
+Text to Speech
+
+Copy page
+
+Convert text to natural-sounding speech with Fish Audio
+
+​
+Overview
+Transform any text into natural, expressive speech using Fish Audio’s advanced TTS models. Choose from pre-made voices or use your own cloned voices.
+Listen to a sample:
+
+0:00
+
+
+
+0:20
+Discover the world’s best cloned voices models on our Discovery page.
+​
+Quick Start
+​
+Web Interface
+The easiest way to generate speech:
+1
+Visit Playground
+
+Go to fish.audio and log in
+2
+Enter Your Text
+
+Type or paste the text you want to convert
+3
+Choose a Voice
+
+Select from available voices or use your own
+4
+Generate
+
+Click “Generate” and download your audio
+​
+Using the SDK
+Python
+JavaScript
+1
+Install the SDK
+
+
+Copy
+
+Ask AI
+npm install fish-audio
+2
+Basic Usage
+
+Generate speech with just a few lines of code:
+
+Copy
+
+Ask AI
+import { FishAudioClient } from "fish-audio";
+import { writeFile } from "fs/promises";
+
+// Initialize session
+const fishAudio = new FishAudioClient({ apiKey: "your_api_key_here" });
+
+const audio = await fishAudio.textToSpeech.convert({
+    text: "Hello, world!",
+    reference_id: "your_voice_model_id",
+});
+
+const buffer = Buffer.from(await new Response(audio).arrayBuffer());
+await writeFile("output.mp3", buffer);
+
+console.log("✓ Audio saved to output.mp3");
+​
+Voice Options
+​
+Using Pre-made Voices
+Browse and select voices from the playground:
+Python
+JavaScript
+
+Copy
+
+Ask AI
+# Use a voice from the playground
+session.tts(TTSRequest(
+    text="Welcome to Fish Audio!",
+    reference_id="7f92f8afb8ec43bf81429cc1c9199cb1"
+))
+​
+Using Your Cloned Voice
+Use voices you’ve created:
+Python
+JavaScript
+
+Copy
+
+Ask AI
+# Use your own cloned voice
+session.tts(TTSRequest(
+    text="This is my custom voice speaking",
+    reference_id="your_model_id"
+))
+​
+Using Reference Audio
+Provide reference audio directly:
+Python
+JavaScript
+
+Copy
+
+Ask AI
+from fish_audio_sdk import ReferenceAudio
+
+# Use reference audio on-the-fly
+session.tts(TTSRequest(
+    text="Hello from reference audio",
+    references=[
+        ReferenceAudio(
+            audio=open("voice_sample.wav", "rb").read(),
+            text="Sample text from the audio"
+        )
+    ]
+))
+​
+Model Selection
+Choose the right model for your needs:
+Model	Best For	Quality	Speed
+s1	Latest features	Excellent	Fast
+speech-1.6	Stable production	Very Good	Fast
+speech-1.5	Legacy support	Good	Fastest
+Specify a model in your request:
+Python
+JavaScript
+
+Copy
+
+Ask AI
+// Using the latest S1 model
+const audio = await fishAudio.textToSpeech.convert(
+    { text: "Hello world" },
+    "s1"
+);
+​
+Advanced Options
+​
+Audio Formats
+Choose your output format:
+Python
+JavaScript
+
+Copy
+
+Ask AI
+const audio = await fishAudio.textToSpeech.convert({
+    text: "Your text here",
+    format: "mp3", // Options: "mp3", "wav", "pcm", "opus"
+    mp3_bitrate: 128, // For MP3: 64, 128, or 192
+});
+​
+Chunk Length
+Control text processing chunks:
+Python
+JavaScript
+
+Copy
+
+Ask AI
+const audio = await fishAudio.textToSpeech.convert({
+    text: "Long text content...",
+    chunk_length: 200, // 100-300 characters per chunk
+});
+​
+Latency Mode
+Optimize for speed or quality:
+Python
+JavaScript
+
+Copy
+
+Ask AI
+session.tts(TTSRequest(
+    text="Quick response needed",
+    latency="balanced"  # "normal" or "balanced"
+))
+Balanced mode reduces latency to ~300ms but may slightly decrease stability.
+​
+Direct API Usage
+For direct API calls without the SDK:
+Python
+JavaScript
+
+Copy
+
+Ask AI
+import { encode } from "@msgpack/msgpack";
+import { writeFile } from "fs/promises";
+
+const body = encode({
+    text: "Hello, world!",
+    reference_id: "your_model_id",
+    format: "mp3",
+});
+
+const res = await fetch("https://api.fish.audio/v1/tts", {
+    method: "POST",
+    headers: {
+        Authorization: "Bearer <YOUR_API_KEY>",
+        "Content-Type": "application/msgpack",
+        model: "s1",
+    },
+    body,
+});
+
+const buffer = Buffer.from(await res.arrayBuffer());
+await writeFile("output.mp3", buffer);
+​
+Streaming Audio
+Stream audio for real-time applications:
+Python
+JavaScript
+
+Copy
+
+Ask AI
+// Use a Websocket to stream real-time audio
+
+import { FishAudioClient, RealtimeEvents } from "fish-audio";
+import { writeFile } from "fs/promises";
+import path from "path";
+
+// Simple async generator that yields text chunks
+async function* makeTextStream() {
+    const chunks = [
+        "Hello from Fish Audio! ",
+        "This is a realtime text-to-speech test. ",
+        "We are streaming multiple chunks over WebSocket.",
+    ];
+    for (const chunk of chunks) {
+        yield chunk;
+    }
+}
+
+const fishAudio = new FishAudioClient({ apiKey: process.env.FISH_API_KEY });
+
+// For realtime, set text to "" and stream the content via makeTextStream
+const request = { text: "" };
+
+const connection = await fishAudio.textToSpeech.convertRealtime(request, makeTextStream());
+
+// Collect audio and write to a file when the stream ends
+const chunks: Buffer[] = [];
+connection.on(RealtimeEvents.OPEN, () => console.log("WebSocket opened"));
+connection.on(RealtimeEvents.AUDIO_CHUNK, (audio: unknown): void => {
+    if (audio instanceof Uint8Array || Buffer.isBuffer(audio)) {
+        chunks.push(Buffer.from(audio));
+    }
+});
+connection.on(RealtimeEvents.ERROR, (err) => console.error("WebSocket error:", err));
+connection.on(RealtimeEvents.CLOSE, async () => {
+    const outPath = path.resolve(process.cwd(), "out.mp3");
+    await writeFile(outPath, Buffer.concat(chunks));
+    console.log("Saved to", outPath);
+});
+​
+Adding Emotions
+Make your speech more expressive:
+Python
+JavaScript
+
+Copy
+
+Ask AI
+// Add emotion markers to your text
+const emotionalText = `(excited) I just won the lottery!
+(sad) But then I lost the ticket.
+(laughing) Just kidding, I found it!`;
+
+const audio = await fishAudio.textToSpeech.convert({
+    text: emotionalText,
+    reference_id: "model_id",
+});
+Available emotions:
+Basic: (happy), (sad), (angry), (excited), (calm)
+Tones: (shouting), (whispering), (soft tone)
+Effects: (laughing), (sighing), (crying)
+For more precise control over pronunciation and additional paralanguage features like pauses and breathing, see Fine-grained Control.
+​
+Best Practices
+​
+Text Preparation
+Do:
+Use proper punctuation for natural pauses
+Add emotion markers for expression
+Break long texts into paragraphs
+Use consistent formatting
+Don’t:
+Use ALL CAPS (unless shouting)
+Mix multiple languages randomly
+Include special characters unnecessarily
+Forget punctuation
+​
+Performance Tips
+Batch Processing: Process multiple texts efficiently
+Cache Models: Store frequently used model IDs
+Optimize Chunk Size: Use 200 characters for best balance
+Handle Errors: Implement retry logic for network issues
+​
+Quality Optimization
+For best results:
+Use high-quality reference audio for cloning
+Choose appropriate emotion markers
+Test different latency modes
+Monitor API rate limits
+​
+Troubleshooting
+​
+Common Issues
+No audio output:
+Check API key validity
+Verify model ID exists
+Ensure proper audio format
+Poor quality:
+Use better reference audio
+Try normal latency mode
+Check text formatting
+Slow generation:
+Use balanced latency mode
+Reduce chunk length
+Check network connection
+​
+Code Examples
+​
+Batch Processing
+Python
+JavaScript
+
+Copy
+
+Ask AI
+const texts = [
+    "First announcement",
+    "Second announcement",
+    "Third announcement",
+];
+
+for (let i = 0; i < texts.length; i++) {
+    const audio = await fishAudio.textToSpeech.convert({
+        text: texts[i],
+        reference_id: "model_id",
+    });
+    const buffer = Buffer.from(await new Response(audio).arrayBuffer());
+    await writeFile(`output_${i}.mp3`, buffer);
+}
+​
+Error Handling
+Python
+JavaScript
+
+Copy
+
+Ask AI
+async function generateWithRetry(text, maxRetries = 3) {
+    for (let attempt = 0; attempt < maxRetries; attempt++) {
+        try {
+            const audio = await fishAudio.textToSpeech.convert({
+                text,
+                reference_id: "model_id",
+            });
+            const buffer = Buffer.from(await new Response(audio).arrayBuffer());
+            return buffer;
+        } catch (err) {
+            if (attempt < maxRetries - 1) {
+                const delayMs = 2 ** attempt * 1000;
+                await new Promise((r) => setTimeout(r, delayMs));
+            } else {
+                throw err;
+            }
+        }
+    }
+}
+
+const buffer = await generateWithRetry("Hello with retry");
+await writeFile("retry_output.mp3", buffer);

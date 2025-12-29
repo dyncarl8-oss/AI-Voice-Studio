@@ -1,0 +1,76 @@
+{
+  "id": "msg_xxxxxxxxxxxxxxxxxxxxxxxx",
+  "api_version": "v1",
+  "timestamp": "2025-01-01T00:00:00.000Z",
+  "type": "payment.succeeded",
+  "data": {
+    "id": "pay_xxxxxxxxxxxxxx",
+    "status": "draft",
+    "substatus": "auto_refunded",
+    "refundable": true,
+    "retryable": true,
+    "voidable": true,
+    "created_at": "2023-12-01T05:00:00.401Z",
+    "paid_at": "2023-12-01T05:00:00.401Z",
+    "last_payment_attempt": "2023-12-01T05:00:00.401Z",
+    "dispute_alerted_at": "2023-12-01T05:00:00.401Z",
+    "refunded_at": "2023-12-01T05:00:00.401Z",
+    "plan": {
+      "id": "plan_xxxxxxxxxxxxx"
+    },
+    "product": {
+      "id": "prod_xxxxxxxxxxxxx",
+      "title": "<string>",
+      "route": "<string>"
+    },
+    "user": {
+      "id": "user_xxxxxxxxxxxxx",
+      "name": "<string>",
+      "username": "<string>",
+      "email": "<string>"
+    },
+    "membership": {
+      "id": "mem_xxxxxxxxxxxxxx",
+      "status": "trialing"
+    },
+    "member": {
+      "id": "<string>",
+      "phone": "<string>"
+    },
+    "company": {
+      "id": "biz_xxxxxxxxxxxxxx",
+      "title": "<string>",
+      "route": "<string>"
+    },
+    "promo_code": {
+      "id": "promo_xxxxxxxxxxxx",
+      "code": "<string>",
+      "amount_off": 6.9,
+      "base_currency": "usd",
+      "promo_type": "percentage",
+      "number_of_intervals": 42
+    },
+    "currency": "usd",
+    "total": 6.9,
+    "subtotal": 6.9,
+    "usd_total": 6.9,
+    "refunded_amount": 6.9,
+    "auto_refunded": true,
+    "amount_after_fees": 6.9,
+    "card_brand": "mastercard",
+    "card_last4": "<string>",
+    "billing_address": {
+      "name": "<string>",
+      "line1": "<string>",
+      "line2": "<string>",
+      "city": "<string>",
+      "state": "<string>",
+      "postal_code": "<string>",
+      "country": "<string>"
+    },
+    "payment_method_type": "acss_debit",
+    "billing_reason": "subscription_create",
+    "failure_message": "<string>",
+    "metadata": {}
+  }
+}
